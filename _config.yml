@@ -18,6 +18,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ppiao.github.io" # the base hostname & protocol for your site
 # twitter_username: ppiao
 github_username:  ppiao
+linkedin_username: ppiao
 
 # Build settings
 markdown: kramdown
