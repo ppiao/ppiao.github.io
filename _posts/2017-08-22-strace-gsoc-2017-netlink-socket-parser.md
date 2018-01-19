@@ -25,7 +25,7 @@ title: strace GSoC 2017 netlink socket parsers
 * Read the code, fix the bug. "Given enough eyeballs, all bugs are shallow".
 * Extend to support more netlink family protocols.
 * Further decode some fields, such as cru_type, cru_mask and cru_flags.
-* Further decode NETLINK_KOBJECT_UEVENT. (libudev and kernel messages.)
+* <span style="text-decoration: line-through">Further decode NETLINK_KOBJECT_UEVENT. (libudev and kernel messages.)</span>
 * Extend or redesign general netlink attribute decoder for decode attribute that
   depend on other attribute.
 
