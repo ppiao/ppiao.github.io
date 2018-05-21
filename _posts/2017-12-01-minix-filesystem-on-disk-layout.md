@@ -8,14 +8,14 @@ File System Implementation. Most knowledge from this book. Here I reference
 some Linux kernel code and write a userspace toy software to make it easy to
 understand.
 
-> What types of on-disk structures are utilized by the file system to organize
-> its data and metadata?
+> > What types of on-disk structures are utilized by the file system to organize
+> > its data and metadata?
+> >
+> > How does it map the calls made by a process, such as open(), read(), write(),
+> > etc., onto its structures?
 >
-> How does it map the calls made by a process, such as open(), read(), write(),
-> etc., onto its structures?
-
-To think about file systems, we usually suggest thinking about these two
-different aspects of them. Now I discuss the first aspect.
+> To think about file systems, we usually suggest thinking about these two
+> different aspects of them.
 
 # 1. Divide disk into blocks
 
