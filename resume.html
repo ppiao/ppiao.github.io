@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>陈景飘的简历</title>
+        <link rel="stylesheet" href="css/resume.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Source+Sans+Pro:400,400i" rel="stylesheet">
+    <body>
+        <div class="page">
+            <div class="section row">
+                <h1 class="col">陈景飘 / Chen Jingpiao</h1>
+                <div class="contact-info col-right">
+                    <div>(+86) 182 1124 5085</div>
+                    <div><a href="mailto:chenjingpiao@gmail.com">chenjingpiao@gmail.com</a></div>
+                    <div><a href="https://ppiao.github.io">ppiao.github.io</a></div>
+                    <div>GitHub: <a href="https://www.github.com/ppiao">ppiao</a></div>
+                </div>
+            </div>
+            <div class="section row">
+                <h2 class="col">自我介绍</h2>
+                <div class="section-text col-right row">
+			<li>熟悉C，了解C++和Go等语言</li>
+			<li>开源爱好者，熟悉开源工作流，其中为strace贡献超过<a href="https://github.com/strace/strace/commits?author=ppiao">200个补丁</a>，两届GSoCer</li>
+                </div>
+            </div>
+            <div class="section row">
+                <h2 class="col">教育经历</h2>
+                <div class="section-text col-right">
+                    <h3>广东药科大学</h3>
+                    <div class="row subsection">
+                        <div class="desc">计算机科学与技术（本科）</div>
+                    </div>
+                    <div class="row">
+                        <div class="col light">Guangzhou, China</div>
+                        <div class="col-right light">2015.09 - 2019.06</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section row">
+                <h2 class="col">工作经历</h2>
+                <div class="section-text col-right">
+                    <div class="row">
+                        <div class="col">
+                            <h3>腾讯 - 技术工程事业群</h3>
+                        </div>
+                    </div>
+                    <div class="row subsection">
+                        <div class="desc">C++后台开发（实习）</div>
+                    </div>
+                    <div class="row">
+                        <div class="col light">Shenzhen, China</div>
+                        <div class="col-right light">2018.06 - 2018.07</div>
+                    </div>
+                    <div class="row">
+			    <div class="col">
+				    <h3>SUSE</h3>
+			    </div>
+		    </div>
+		    <div class="desc">Linux程序开发：高可用集群组（实习）</div>
+                    <div class="row">
+                        <div class="col light">Beijing, China</div>
+                        <div class="col-right light">2018.10 - 2018.12</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section row">
+                <h2 class="col">项目</h2>
+                <div class="section-text col-right">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Playground: 远程编译运行代码</h3>
+                        </div>
+                    </div>
+                    <ul class="desc">
+
+			    Playground是一个远程编译运行代码的后台，基于HTTP协议，并通过JSON格式向服务器传输代码和程序的输出，服务器把接收代码写进文件中，编译运行后，把结果返回非客户端。
+			    <li>支持Go、C和C++语言</li>
+			    <li>支持超时检测</li>
+                </div>
+                <div class="section-text col-right">
+                    <div class="row">
+                        <div class="col">
+                            <h3>GSoC 2018: seccomp协助strace筛选系统调用</h3>
+                        </div>
+                    </div>
+                    <ul class="desc">
+			    strace是系统调用跟踪工具，可以使用-etrace=SYSCALL选项跟踪指定系统调用，现在是在strace用户层通过系统调用号进行筛选，使用seccomp的SECCOMP_RET_TRACE API可以更加高效地筛选系统调用，使用这个技术，被跟踪进程挂起在被选中的系统调用入口处，而不是所有系统调用。主要工作有：
+			    <li>在strace中使用seccomp的SECCOMP_RET_TRACE API实现系统调用的筛选</li>
+			    <li>构造支持multi-architecture和multi-personality的BPF指令</li>
+			    <li>运行时检测seccomp的行为</li>
+			    <li>完成相关测试</li>
+                </div>
+                <div class="section-text col-right">
+                    <div class="row">
+                        <div class="col">
+                            <h3>GSoC 2017: 实现strace中的netlink socket解释器</h3>
+                        </div>
+                    </div>
+                    <ul class="desc">
+			    strace是Linux系统调用跟踪工具，netlink socket在Linux下用于进程通信，通常用于用户空间和内核的通信。用于iptables，iproute2，nftables等软件。现在strace捕获到netlink的内容统一以16进制显示，对使用者不够友好，此项目是在strace以更友好的方式显示netlink协议的内容。主要工作有：
+			    <li>修改并合并的GSoC 2016的代码</li>
+			    <li>实现netlink socket解释器的基本模块</li>
+			    <li>完成了NETLINK_SOCK_DIAG, NETLINK_ROUTE, NETLINK_SELINUX, NETLINK_CRYPTO, NETLINK_KOBJECT_UEVENT等协议的解释器</li>
+			    <li>完成了所有相关的测试</li>
+                </div>
+            </div>
+            <div class="section row">
+                <h2 class="col">荣誉</h2>
+                <div class="section-text col-right row">
+			<li><a href="https://summerofcode.withgoogle.com/archive/2017/projects/6190091550588928">Google Summer of Code 2017</a></li>
+			<li><a href="https://summerofcode.withgoogle.com/projects/#5194902636331008">Google Summer of Code 2018</a></li>
+                </div>
+            </div>
+            <div class="section row">
+                <h2 class="col">兴趣爱好</h2>
+                <div class="section-text col-right row">
+			<li>打篮球、跑步、徒步、阅读</li>
+		</div>
+	    </div>
+        </div>
+    </body>
+</html>
